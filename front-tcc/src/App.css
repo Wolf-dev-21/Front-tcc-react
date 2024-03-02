@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  padding: 20px;
 }
 
 .App-logo {
@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form{
+  
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 3%;
 }

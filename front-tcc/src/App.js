@@ -1,39 +1,58 @@
 import logo from './logo.svg';
-import { Button, } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [nome , setNome] = useState();
+
+  const [email , setEmail] = useState('');
+
+  const [senha , setSenha] = useState('');
+
+
+
+  function Login(event){
+    event.preventDefault();
+    // alert('monke cadastred')
+    alert(`NOME: ${nome} EMAIL: ${email} SENHA: ${senha}`)
+  }
+
+
   return (
-    <Container style={{justifyContent: 'center', width:'30%'}}>
+    <div className="App">
       <h1>Login</h1>
-
-      <Form>
-        <Form.Group className="mt-3" as={Row}>
-          <Form.Label collum sm="2">Email</Form.Label>
-            <Col sm='10'>
-              <Form.Control type='email' placeholder='Digite email'/>
-            </Col>
-        </Form.Group>
-
-        <Form.Group className="mt-3" as={Row}>
-          <Form.Label collum sm="2">Senha</Form.Label>
-            <Col sm='10'>
-              <Form.Control type='password' placeholder='Digite email'/>
-            </Col>
-        </Form.Group>
-
-        <Form.Group className="mt-3" as={Row}>
-          <Button variant="primary" type="">Log-in</Button>
-        </Form.Group>
-
-      </Form>
-
-    </Container>
+      <form onSubmit={Login} className='form'>
+        <input 
+          type='text' 
+          required 
+          placeholder='Digite teu nome'
+          value={nome}
+          onChange={(event)=>{setNome(event.target.value)}}
+          >
+          
+        </input>
+        <input 
+          type='text' 
+          required 
+          placeholder='Digite seu email'
+          value={email}
+          onChange={(event)=>{setEmail(event.target.value)}}
+          >
+        </input>
+        <input 
+          type='text' 
+          required 
+          placeholder='Digite sua senha'
+          value={senha}
+          onChange={(event)=>{setSenha(event.target.value)}}
+          >
+        </input>
+        <button type='submit'>
+          Entrar
+        </button>
+      </form>
+    </div>
   );
 }
 
