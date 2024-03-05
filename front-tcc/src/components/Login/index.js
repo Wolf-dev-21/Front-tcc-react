@@ -21,13 +21,44 @@ async function validation (event){
     try{
         const res = await api.get(`/user/un/${userName}`)
         setNome(res.data.user[0])
-        Navigation.navigate(`Tabs`)
     } catch(error) {
         alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
     }
 
 }
 
+async function validation (event){
+    event.preventDefault();
+    try{
+        const res = await api.get(`/user/un/${userEmail}`)
+        setNome(res.data.user[0])
+    } catch(error) {
+        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
+    }
+
+}
+
+async function validation (event){
+    event.preventDefault();
+    try{
+        const res = await api.get(`/user/un/${userPassword}`)
+        setNome(res.data.user[0])
+    } catch(error) {
+        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
+    }
+
+}
+
+async function validation (event){
+    event.preventDefault();
+    try{
+        const res = await api.get(`/user/un/${typeUser}`)
+        setNome(res.data.user[0])
+    } catch(error) {
+        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
+    }
+
+}
 
 
 
