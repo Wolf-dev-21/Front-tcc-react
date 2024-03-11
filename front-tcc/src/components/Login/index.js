@@ -1,90 +1,35 @@
-import logo from './logo.svg';
-import '../../components/Login/style.css';
+import './style.css';
 import { useState } from 'react';
+import api from '../../api/api';
 
-function App() {
-
-const [userName , setNome] = useState();
+function Login() {
 
 const [userEmail , setEmail] = useState('');
 
 const [userPassword , setSenha] = useState('');
 
-const [typeUser , setUser] = useState('');
-    
-    alert(`NOME: ${userName} EMAIL: ${userEmail} SENHA: ${userPassword} Tipo de Usuário: ${typeUser}`)
-
-
-    
-async function validation (event){
-    event.preventDefault();
-    try{
-        const res = await api.get(`/user/un/${userName}`)
-        setNome(res.data.user[0])
-    } catch(error) {
-        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
-    }
-
-}
 
 async function validation (event){
     event.preventDefault();
+
+    const dataUser = {userEmail, userPassword}
+
     try{
-        const res = await api.get(`/user/un/${userEmail}`)
-        setNome(res.data.user[0])
+        await api.post(`/user/validation`, dataUser)
+        alert('Login realizado')
     } catch(error) {
-        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
+        alert(`Falha ao realizar Login ${error}`)
     }
 
 }
-
-async function validation (event){
-    event.preventDefault();
-    try{
-        const res = await api.get(`/user/un/${userPassword}`)
-        setNome(res.data.user[0])
-    } catch(error) {
-        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
-    }
-
-}
-
-async function validation (event){
-    event.preventDefault();
-    try{
-        const res = await api.get(`/user/un/${typeUser}`)
-        setNome(res.data.user[0])
-    } catch(error) {
-        alert(`Erro ao estabelecer conexão com banco de dados. ${error}`)
-    }
-
-}
-
-
-
-
-
-
-
-
-
 
 return (
     <div className="App">
     <h1>Login</h1>
-    <form onSubmit={Login} className='form'>
-        <input 
-        type='text' 
-        required 
-        placeholder='Digite teu nome'
-        value={userName}
-        onChange={(event)=>{setNome(event.target.value)}}
-        >
-        
-        </input>
+    <form onSubmit={validation} className='form'>
 
         <input 
-        type='text' 
+        type='email' 
         required 
         placeholder='Digite seu email'
         value={userEmail}
@@ -93,7 +38,7 @@ return (
         </input>
 
         <input 
-        type='text' 
+        type='password' 
         required 
         placeholder='Digite sua senha'
         value={userPassword}
@@ -101,14 +46,6 @@ return (
         >
         </input>
 
-        <input 
-        type='text' 
-        required 
-        placeholder='Tipo de usuário'
-        value={typeUser}
-        onChange={(event)=>{setUser(event.target.value)}}
-        >
-        </input>
 
         <button type='submit'>
         Entrar
@@ -118,4 +55,4 @@ return (
 );
 }
 
-export default App;
+export default Login;
