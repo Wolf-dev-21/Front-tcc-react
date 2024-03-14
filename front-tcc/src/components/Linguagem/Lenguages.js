@@ -2,7 +2,7 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function Lenguages() {
+function Login() {
 const [userName , setNome] = useState('');
 
 const [userEmail , setEmail] = useState('');
@@ -74,4 +74,4 @@ return (
 );
 }
 
-export default Lenguages;
+export default Login;

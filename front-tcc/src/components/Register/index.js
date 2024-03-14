@@ -2,25 +2,25 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function Register() {
-const [userName , setNome] = useState('');
+function Language() {
+const [ name, setName] = useState('');
 
-const [userEmail , setEmail] = useState('');
+const [description , setDescription] = useState('');
 
-const [userPassword , setSenha] = useState('');
+const [idLanguage , setLanguage] = useState('');
 
-const [typeUser , setUser] = useState('comum');
+
 
 async function register (event){
     event.preventDefault();
 
-    const dataUser = {userName, userEmail, userPassword, typeUser}
+    const dataLanguage = {name, description, idLanguage,}
 
     try{
-        await api.post(`/user/register`, dataUser)
-        alert('Cadastro realizado')
+        await api.post(`/user/register`, dataLanguage)
+        alert('Linguagem adicionada com sucesso.')
     } catch(error) {
-        alert(`Erro ao cadastrar ${error}`)
+        alert(`Erro ao adicionar${error}`)
     }
 
 }
