@@ -1,10 +1,10 @@
-import React, {useState} from "react";
-import Login from "../components/Login";
 
-export default function LoginDev(){
+import AddLang from "../components/Linguagem/AdicionarLingua";
+
+export default function AddLang(){
     return (
         <div>
-            <Login/>
+            <AddLang/>
         </div>
     );
 
