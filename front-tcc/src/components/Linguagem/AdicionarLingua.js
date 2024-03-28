@@ -3,7 +3,7 @@ import { useState } from 'react';
 import api from '../../api/api';
 
 function AddLang() {
-const [name , ] = useState('');
+const [name, setName] = useState('');
 const [description , setDescription] = useState('');
 
 
@@ -11,11 +11,11 @@ const [description , setDescription] = useState('');
 async function createLang (event){
     event.preventDefault();
 
-    const lang = {name, description}
+    const dataLang = {name, description}
 
     try{
-        await api.post(`/`, lang)
-        alert('Cadastro realizado')
+        await api.post(`/language`, dataLang)
+        alert('Linguagem adicionada com sucesso.')
     } catch(error) {
         alert(`Erro ao adicionar ${error}`)
     }
@@ -32,7 +32,7 @@ return (
         required 
         placeholder='Adicione a linguagem'
         value={name}
-        onChange={(event)=>{setNome(event.target.value)}}
+        onChange={(event)=>{setName(event.target.value)}}
         >
         
         </input>

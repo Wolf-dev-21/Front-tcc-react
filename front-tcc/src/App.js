@@ -1,7 +1,7 @@
 import './App.css';
 import LoginDev from './pages/LoginDev';
 import Register from './components/Register';
-import AddLang from './pages/Linguagem';
+import AdicionarLing from '../src/pages/Linguagem';
 
 function App() {
 return (
@@ -19,7 +19,7 @@ return (
 
     <div className="App">
         <div>
-        <AddLang/>
+        <AdicionarLing/>
         </div>
     </div> 
 );

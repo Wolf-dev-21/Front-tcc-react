@@ -1,7 +1,7 @@
 
 import AddLang from "../components/Linguagem/AdicionarLingua";
 
-export default function AddLang(){
+export default function AdicionarLing(){
     return (
         <div>
             <AddLang/>
@@ -9,3 +9,4 @@ export default function AddLang(){
     );
 
 }
+
