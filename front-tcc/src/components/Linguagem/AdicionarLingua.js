@@ -25,7 +25,21 @@ async function createLang (event){
 async function updateLang (event){
     event.preventDefault();
 
-    const dataLang = {name, description, idLanguage}
+    const upLang = {name, description, idLanguage}
+
+    try{
+        await api.put('/', dataLang)
+        alert('Linguagem adicionada com sucesso.')
+    } catch(error) {
+        alert(`Erro ao Atualizar ${error}`)
+    }
+
+}
+
+async function deleteLang (event){
+    event.preventDefault();
+
+    const delLang = {idLanguage}
 
     try{
         await api.put('/', dataLang)
@@ -70,7 +84,10 @@ return (
 
     
     <form onSubmit={updateLang} className='form'>
-    <h1>Adicionar Linguagem</h1>
+    <h1>Atualizar Linguagem</h1>
+
+
+
 <input 
 type='text' 
 required 
@@ -91,10 +108,20 @@ onChange={(event)=>{setDescription(event.target.value)}}
 
 </input>
 
+<input 
+type='text' 
+required 
+placeholder='Id da Linguagem'
+value={idLanguage}
+onChange={(event)=>{setDescription(event.target.value)}}
+>
+
+</input>
+
 
 
 <button type='submit'>
-Adicionar
+Atalizar
 </button>
 </form>
     </div>
