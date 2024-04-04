@@ -2,40 +2,36 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function AddLang() {
+function UpLang() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
+    const [idLanguage, setIdLanguage] = useState('');
 
-
-
-    async function createLang(event) {
+    async function updateLang(event) {
         event.preventDefault();
 
-        const dataLang = { name, description }
+        const dataLang = { name, description, idLanguage}
 
         try {
-            await api.post('/language', dataLang)
-            alert('Linguagem adicionada com sucesso.')
+            await api.put('/language', dataLang)
+            alert('Atualizada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)
         }
 
     }
 
-    
+return(
 
+    <div className="App">
 
-
-    return (
-        <div className="App">
-
-            <h1>Adicionar Linguagem</h1>
-            <form onSubmit={createLang} className='form'>
+    <h1>Atualizar Lingagem</h1>
+            <form onSubmit={updateLang} className='form'>
 
                 <input
                     type='text'
                     required
-                    placeholder='Adicione a linguagem'
+                    placeholder='Atualizar nome'
                     value={name}
                     onChange={(event) => { setName(event.target.value) }}
                 >
@@ -45,25 +41,30 @@ function AddLang() {
                 <input
                     type='text'
                     required
-                    placeholder='Descreva a Linguagem'
+                    placeholder='atualizar descrição'
                     value={description}
                     onChange={(event) => { setDescription(event.target.value) }}
                 >
+                </input>
 
+                <input
+                type='text'
+                required
+                placeholder='Id da Linguagem'
+                value={idLanguage}
+                onChange={(event) => { setIdLanguage(event.target.value) }}
+                
+                >
+                    
                 </input>
 
                 <button type='submit'>
-                    Adicionar
+                    Atualizar
                 </button>
             </form>
 
-
-
-
-        </div>
-
-
-    );
+            </div>
+);
 }
 
-export default AddLang;
+export default UpLang;
