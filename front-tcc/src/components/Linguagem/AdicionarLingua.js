@@ -31,7 +31,7 @@ function AddLang() {
 
             <h1>Adicionar Linguagem</h1>
             <form onSubmit={createLang} className='form'>
-
+                
                 <input
                     type='text'
                     required

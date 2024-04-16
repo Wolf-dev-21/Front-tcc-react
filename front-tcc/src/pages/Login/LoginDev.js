@@ -5,7 +5,7 @@ export default function LoginDev(){
     return (
         <div>
             <Login/>
-            <Register/>
+            
         </div>
     );
 

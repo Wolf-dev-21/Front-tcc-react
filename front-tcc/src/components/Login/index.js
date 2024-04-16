@@ -1,6 +1,8 @@
 import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 
 function Login() {
 
@@ -46,10 +48,17 @@ return (
         >
         </input>
 
-
+        
+        
         <button type='submit'>
         Entrar
         </button>
+
+        <button  type='submit'>
+        <Link to='/Register'>Criar cadastro</Link>
+        </button>
+        
+        
     </form>
     </div>
 );
