@@ -1,10 +1,12 @@
 import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useNavigate  } from 'react-router-dom';
 
 
 function Login() {
+
+    const navigate = useNavigate();
 
 const [userEmail , setEmail] = useState('');
 
@@ -18,7 +20,8 @@ async function validation (event){
 
     try{
         await api.post(`/user/validation`, dataUser)
-        alert('Login realizado')
+        alert('Login realizado') 
+        navigate("/Linguagem");
     } catch(error) {
         alert(`Falha ao realizar Login ${error}`)
     }
@@ -50,16 +53,16 @@ return (
 
         
         
-        <button type='submit'>
+        <button type='submit' >
         Entrar
         </button>
 
-        <button  type='submit'>
-        <Link to='/Register'>Criar cadastro</Link>
-        </button>
         
         
     </form>
+        <button  type='button'>
+        <Link to='/Register'>Criar cadastro</Link>
+        </button>
     </div>
 );
 }

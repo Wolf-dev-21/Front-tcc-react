@@ -1,8 +1,12 @@
 import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
+import { BrowserRouter, Routes, Route, Link, useNavigate  } from 'react-router-dom';
 
 function Register() {
+
+    const navigate = useNavigate();
+
     const [userName , setNome] = useState('');
 
     const [userEmail , setEmail] = useState('');
@@ -21,6 +25,7 @@ async function register (event){
     try{
         await api.post(`/user/register`, dataUser)
         alert('Cadastro realizado')
+        navigate("/Linguagem");
     } catch(error) {
         alert(`Erro ao adicionar${error}`)
     }
@@ -69,7 +74,7 @@ return (
         </input>
 
         <button type='submit'>
-        cadastrar
+        Cadastrar
         </button>
     </form>
     </div>
