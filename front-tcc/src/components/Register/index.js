@@ -13,14 +13,14 @@ function Register() {
     
     const [userPassword , setSenha] = useState('');
     
-    const [typeUser , setUser] = useState('comum');
+    const [userType , setUser] = useState('');
 
 
 
 async function register (event){
     event.preventDefault();
 
-    const dataUser = {userName, userEmail, userPassword, typeUser}
+    const dataUser = {userEmail, userName, userPassword, userType}
 
     try{
         await api.post(`/user/register`, dataUser)
@@ -68,7 +68,7 @@ return (
         type='text' 
         required 
         placeholder='Tipo de usuário'
-        value={typeUser}
+        value={userType}
         onChange={(event)=>{setUser(event.target.value)}}
         >
         </input>
