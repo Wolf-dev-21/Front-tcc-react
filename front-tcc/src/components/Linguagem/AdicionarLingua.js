@@ -5,19 +5,22 @@ import api from '../../api/api';
 function AddLang() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
+    const [icon, setIcon] = useState('');
+    const [groupid, setGroupId] = useState('');
+
 
 
 
     async function createLang(event) {
         event.preventDefault();
 
-        const dataLang = { name, description }
+        const course = { name, description, icon, groupid }
 
         try {
-            await api.post('/language', dataLang)
-            alert('Linguagem adicionada com sucesso.')
+            await api.post('/', course)
+            alert('Curso criado com sucesso.')
         } catch (error) {
-            alert(`Erro ao adicionar ${error}`)
+            alert(`Erro ao criar curso ${error}`)
         }
 
     }
@@ -35,7 +38,7 @@ function AddLang() {
                 <input
                     type='text'
                     required
-                    placeholder='Adicione a linguagem'
+                    placeholder='Adicione o curso'
                     value={name}
                     onChange={(event) => { setName(event.target.value) }}
                 >
@@ -45,7 +48,7 @@ function AddLang() {
                 <input
                     type='text'
                     required
-                    placeholder='Descreva a Linguagem'
+                    placeholder='Descreva o curso'
                     value={description}
                     onChange={(event) => { setDescription(event.target.value) }}
                 >
