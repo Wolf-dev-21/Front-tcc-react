@@ -7,6 +7,9 @@ function UpLang() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [idLanguage, setIdLanguage] = useState('');
+    const [icon, setIcon] = useState('');
+    const [groupId, setGroupId] = useState('');
+    const [courseId, setCourseId] = useState('');
 
     async function updateLang(event) {
         event.preventDefault();

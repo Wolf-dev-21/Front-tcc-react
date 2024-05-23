@@ -6,15 +6,15 @@ function AddLang() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [icon, setIcon] = useState('');
-    const [groupid, setGroupId] = useState('');
+    const [groupId, setGroupId] = useState('');
 
 
 
 
-    async function createLang(event) {
+    async function createCourse(event) {
         event.preventDefault();
 
-        const course = { name, description, icon, groupid }
+        const course = { name, description, icon, groupId }
 
         try {
             await api.post('/', course)
@@ -33,7 +33,7 @@ function AddLang() {
         <div className="App">
 
             <h1>Adicionar Linguagem</h1>
-            <form onSubmit={createLang} className='form'>
+            <form onSubmit={createCourse} className='form'>
                 
                 <input
                     type='text'
@@ -54,6 +54,24 @@ function AddLang() {
                 >
 
                 </input>
+
+                <input
+                    type='text'
+                    required
+                    placeholder='Id do Grupo'
+                    value={groupId}
+                    onChange={(event) => {    setGroupId(event.target.value)}}>
+
+                    </input>
+
+                    <input
+                    type='image'
+                    required
+                    placeholder='insira o icone'
+                    value={icon}
+                    onChange={(event) => {    setGroupId(event.target.value)}}>
+                        
+                    </input>
 
                 <button type='submit'>
                     Adicionar
