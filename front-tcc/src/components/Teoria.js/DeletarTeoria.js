@@ -4,15 +4,15 @@ import api from '../../api/api';
 
 function DelTeoria() {
 
-    const [idTeory, setIdTeory] = useState('');
+    const [teoryId, setTeoryId] = useState('');
 
     async function deleteTeory(event) {
         event.preventDefault();
 
-        const dataTeory = {idTeory}
+        const dataTeory = {teoryId}
 
         try {
-            await api.delete('/Teory/:idTeory', dataTeory)
+            await api.delete('/teory/:teoryId', dataTeory)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)
@@ -30,9 +30,9 @@ return(
                 <input
                 type='text'
                 required
-                placeholder='Id da Linguagem para deletar'
-                value={idTeory}
-                onChange={(event) => { setIdTeory(event.target.value) }}  
+                placeholder='Id da Teoria para deletar'
+                value={teoryId}
+                onChange={(event) => { setTeoryId(event.target.value) }}  
                 >
                     
                 </input>

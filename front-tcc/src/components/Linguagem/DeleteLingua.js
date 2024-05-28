@@ -5,15 +5,15 @@ import api from '../../api/api';
 
 function DelLang() {
 
-    const [idLanguage, setIdLanguage] = useState('');
+    const [courseId, setCourseId] = useState('');
 
     async function DeleteLang(event) {
         event.preventDefault();
 
-        const dataLang = {idLanguage}
+        const dataLang = {courseId}
 
         try {
-            await api.delete('/language/:idLanguage', dataLang)
+            await api.delete('/course/:courseID', dataLang)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)
@@ -31,9 +31,9 @@ return(
                 <input
                 type='text'
                 required
-                placeholder='Id da Linguagem para deletar'
-                value={idLanguage}
-                onChange={(event) => { setIdLanguage(event.target.value) }}  
+                placeholder='Id do curso para deletar'
+                value={courseId}
+                onChange={(event) => { setCourseId(event.target.value) }}  
                 >
                     
                 </input>

@@ -5,18 +5,17 @@ import api from '../../api/api';
 function AddTeoria() {
     const [name, setName] = useState('');
     const [teory, setTeory] = useState('');
-    const [idLanguage, setIdLanguage] = useState('');
-    const [idDifficulty, setIdDifficulty] = useState('');
+    const [stageId, setIdStageId] = useState('');
 
 
 
     async function createTeory(event) {
         event.preventDefault();
 
-        const dataTeory = {name, teory, idLanguage, idDifficulty}
+        const dataTeory = {name, teory, stageId}
 
         try {
-            await api.post('/Teory', dataTeory)
+            await api.post('/teory', dataTeory)
             alert('Teoria adicionada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)
@@ -55,18 +54,9 @@ function AddTeoria() {
                 <input
                     type='text'
                     required
-                    placeholder='Insira o ID da Linguagem'
-                    value={idLanguage}
-                    onChange={(event) => { setIdLanguage(event.target.value) }}
-                >
-                </input>
-
-                <input
-                    type='text'
-                    required
                     placeholder='Insira o ID da dificuldade'
-                    value={idDifficulty}
-                    onChange={(event) => { setIdDifficulty(event.target.value) }}
+                    value={stageId}
+                    onChange={(event) => { setIdStageId(event.target.value) }}
                 >
                 </input>
 

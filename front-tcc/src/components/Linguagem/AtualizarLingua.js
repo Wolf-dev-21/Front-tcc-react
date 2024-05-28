@@ -6,7 +6,6 @@ import api from '../../api/api';
 function UpLang() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
-    const [idLanguage, setIdLanguage] = useState('');
     const [icon, setIcon] = useState('');
     const [groupId, setGroupId] = useState('');
     const [courseId, setCourseId] = useState('');
@@ -14,10 +13,10 @@ function UpLang() {
     async function updateLang(event) {
         event.preventDefault();
 
-        const dataLang = { name, description, idLanguage}
+        const dataLang = { name, description, icon, groupId, courseId }
 
         try {
-            await api.put('/language', dataLang)
+            await api.put('/course', dataLang)
             alert('Atualizada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)
@@ -54,9 +53,31 @@ return(
                 <input
                 type='text'
                 required
-                placeholder='Id da Linguagem'
-                value={idLanguage}
-                onChange={(event) => { setIdLanguage(event.target.value) }}
+                placeholder='Colocar o icone'
+                value={icon}
+                onChange={(event) => { setIcon(event.target.value) }}
+                
+                >
+                    
+                </input>
+
+                <input
+                type='text'
+                required
+                placeholder='Coloque o ID do curso'
+                value={courseId}
+                onChange={(event) => { setCourseId(event.target.value) }}
+                
+                >
+                    
+                </input>
+
+                <input
+                type='text'
+                required
+                placeholder='Coloque o ID do grupo'
+                value={groupId}
+                onChange={(event) => { setGroupId(event.target.value) }}
                 
                 >
                     

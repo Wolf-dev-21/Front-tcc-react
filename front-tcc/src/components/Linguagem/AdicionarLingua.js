@@ -17,7 +17,7 @@ function AddLang() {
         const course = { name, description, icon, groupId }
 
         try {
-            await api.post('/', course)
+            await api.post('/course', course)
             alert('Curso criado com sucesso.')
         } catch (error) {
             alert(`Erro ao criar curso ${error}`)
@@ -65,11 +65,11 @@ function AddLang() {
                     </input>
 
                     <input
-                    type='image'
+                    type='text'
                     required
                     placeholder='insira o icone'
                     value={icon}
-                    onChange={(event) => {    setGroupId(event.target.value)}}>
+                    onChange={(event) => {    setIcon(event.target.value)}}>
                         
                     </input>
 

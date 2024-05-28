@@ -5,17 +5,16 @@ import api from '../../api/api';
 function UpTeoria() {
     const [name, setName] = useState('');
     const [teory, setTeory] = useState('');
-    const [idLanguage, setIdLanguage] = useState('');
-    const [idDifficulty, setIdDifficulty] = useState('');
-    const [idTeory, setIdTeory] = useState('');
+    const [stageId, setStageId] = useState('');
+    const [teoryId, setTeoryId] = useState('');
 
     async function updateLang(event) {
         event.preventDefault();
 
-        const dataTeory = { name, teory, idLanguage, idDifficulty, idTeory}
+        const dataTeory = { name, teory, stageId, teoryId}
 
         try {
-            await api.put('/Teory', dataTeory)
+            await api.put('/teory', dataTeory)
             alert('Atualizada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)
@@ -52,18 +51,9 @@ return(
                 <input
                     type='text'
                     required
-                    placeholder='Insira o ID da Linguagem'
-                    value={idLanguage}
-                    onChange={(event) => { setIdLanguage(event.target.value) }}
-                >
-                </input>
-
-                <input
-                    type='text'
-                    required
-                    placeholder='Insira o ID da dificuldade'
-                    value={idDifficulty}
-                    onChange={(event) => { setIdDifficulty(event.target.value) }}
+                    placeholder='Insira o ID do estagio'
+                    value={stageId}
+                    onChange={(event) => { setStageId(event.target.value) }}
                 >
                 </input>
 
@@ -71,8 +61,8 @@ return(
                     type='text'
                     required
                     placeholder='Insira o ID da teoria'
-                    value={idTeory}
-                    onChange={(event) => { setIdTeory(event.target.value) }}
+                    value={teoryId}
+                    onChange={(event) => { setTeoryId(event.target.value) }}
                 >
                 </input>
 
