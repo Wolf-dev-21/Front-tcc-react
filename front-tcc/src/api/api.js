@@ -3,7 +3,7 @@ import axios from 'axios';
 //O código abaixo é usado para o localhost, apenas para isso. Há outras opções abaixo
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333/devgenius'
+  baseURL: 'http://localhost:3000/devgenius'
 });
 
 // Para funcionar no mobile, tem que estar na mesma rede, ao inves do localhost
