@@ -10,13 +10,13 @@ function UpTeoria() {
     const [stageId, setStageId] = useState('');
     const [taskId, setTaskId] = useState('');
 
-    async function updateLang(event) {
+    async function updateTask(event) {
         event.preventDefault();
 
-        const dataTeory = { name, task,explanation,operationId, stageId, taskId}
+        const dataTask = { name, task,explanation,operationId, stageId, taskId}
 
         try {
-            await api.put('/teory', dataTeory)
+            await api.put('/task', dataTask)
             alert('Atualizada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)
@@ -28,8 +28,8 @@ return(
 
     <div className="App">
 
-    <h1>Atualizar Teoria</h1>
-            <form onSubmit={updateLang} className='form'>
+    <h1>Atualizar Task</h1>
+            <form onSubmit={updateTask} className='form'>
 
                 <input
                     type='text'
@@ -53,6 +53,24 @@ return(
                 <input
                     type='text'
                     required
+                    placeholder='Insira a explicação'
+                    value={explanation}
+                    onChange={(event) => { setExplanation(event.target.value) }}
+                >
+                </input>
+
+                <input
+                    type='text'
+                    required
+                    placeholder='Insira o ID da operação'
+                    value={operationId}
+                    onChange={(event) => { setOperationId(event.target.value) }}
+                >
+                </input>
+
+                <input
+                    type='text'
+                    required
                     placeholder='Insira o ID do estagio'
                     value={stageId}
                     onChange={(event) => { setStageId(event.target.value) }}
@@ -62,9 +80,9 @@ return(
                 <input
                     type='text'
                     required
-                    placeholder='Insira o ID da teoria'
-                    value={teoryId}
-                    onChange={(event) => { setTeoryId(event.target.value) }}
+                    placeholder='Insira o ID da task'
+                    value={taskId}
+                    onChange={(event) => { setTaskId(event.target.value) }}
                 >
                 </input>
 
