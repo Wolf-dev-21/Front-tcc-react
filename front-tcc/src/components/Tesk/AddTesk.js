@@ -17,8 +17,8 @@ function AddTask() {
         const dataTask = {name, task,explanation,operationId, stageId}
 
         try {
-            await api.post('/task', createTask)
-            alert('Teoria adicionada com sucesso.')
+            await api.post('/task', dataTask)
+            alert('Task adicionada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)
         }
