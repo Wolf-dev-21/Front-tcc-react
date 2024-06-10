@@ -17,6 +17,13 @@ import Linguagem from './pages/Linguagem/Linguagem';
 import Teoria from './pages/Teoria/Teoria';
 import Register from './components/Register';
 
+//Task
+
+
+//Stage
+
+//Answer
+
 function App() {
 return (
     <div className="App">
