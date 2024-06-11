@@ -2,7 +2,7 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function UpTeoria() {
+function UpAnswer() {
     const [answer, setAnswer] = useState('');
     const [altA, setAltA] = useState('');
     const [altB, setAltB] = useState('');
@@ -86,4 +86,4 @@ return(
 );
 }
 
-export default UpTeoria;
+export default UpAnswer;

@@ -2,7 +2,7 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function UpTeoria() {
+function UpAnswer() {
     const [answer, setAnswer] = useState('');
     const [taskId, setTaskId] = useState('');
     const [altA, setAltA] = useState('');
@@ -117,4 +117,4 @@ return(
 );
 }
 
-export default UpTeoria;
+export default UpAnswer;

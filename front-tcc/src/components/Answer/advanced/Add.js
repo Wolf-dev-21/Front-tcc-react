@@ -2,7 +2,7 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function Add() {
+function AddAnswer() {
     const [code, setCode] = useState('');
     const [taskId, setTaskId] = useState('');
 
@@ -66,4 +66,4 @@ function Add() {
     );
 }
 
-export default Add;
+export default AddAnswer;

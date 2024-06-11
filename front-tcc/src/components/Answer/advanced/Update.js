@@ -2,7 +2,7 @@ import './style.css';
 import { useState } from 'react';
 import api from '../../api/api';
 
-function UpTeoria() {
+function UpAnswer() {
     const [code, setCode] = useState('');
     const [answerId, setAnswerId] = useState('');
 
@@ -57,4 +57,4 @@ return(
 );
 }
 
-export default UpTeoria;
+export default UpAnswer;
