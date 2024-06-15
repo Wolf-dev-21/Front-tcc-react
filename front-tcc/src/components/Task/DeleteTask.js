@@ -12,7 +12,7 @@ function DelTask() {
         const dataTask = {taskId}
 
         try {
-            await api.delete('/task/:taskId', dataTask)
+            await api.delete(`/task/${taskId}`)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)
@@ -24,7 +24,7 @@ return(
 
     <div className="App">
 
-    <h1>deletar stage</h1>
+    <h1>deletar Task</h1>
             <form onSubmit={deleteTask} className='form'>
 
                 <input

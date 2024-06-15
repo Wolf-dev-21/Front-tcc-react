@@ -7,6 +7,15 @@ export default function BasicAnswer(){
     return(
         <div>
             <Link to='/Linguagem'>Linguagem</Link>
+            <Link to='/Teoria'>Teoria</Link>
+            <Link to='/Stage'>Stage</Link>
+            <Link to='/Task'>Task</Link>
+
+
+            <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
+            <Link to='/AdvancedAnswer'>Resposta avançada</Link>
+
+
             <AddAnswer/>
             <UpAnswer/>
             <DelAnswer/>

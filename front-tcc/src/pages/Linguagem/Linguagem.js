@@ -7,7 +7,14 @@ import DelLang from '../../components/Linguagem/DeleteLingua';
 export default function Linguagem(){
     return (
         <div>
+            
             <Link to='/Teoria'>Teoria</Link>
+            <Link to='/Stage'>Stage</Link>
+            <Link to='/Task'>Task</Link>
+
+            <Link to='/BasicAnswer'>Resposta Básica</Link>
+            <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
+            <Link to='/AdvancedAnswer'>Resposta avançada</Link>
             <AddLang/>
             <UpLang/>
             <DelLang/>
@@ -16,4 +23,3 @@ export default function Linguagem(){
     );
 
 }
-

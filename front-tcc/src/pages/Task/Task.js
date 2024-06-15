@@ -7,6 +7,13 @@ export default function Task(){
     return(
         <div>
             <Link to='/Linguagem'>Linguagem</Link>
+            <Link to='/Teoria'>Teoria</Link>
+            <Link to='/Stage'>Stage</Link>
+
+            <Link to='/BasicAnswer'>Resposta Básica</Link>
+            <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
+            <Link to='/AdvancedAnswer'>Resposta avançada</Link>
+
             <AddTask/>
             <UpTask/>
             <DelTask/>

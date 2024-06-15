@@ -11,7 +11,7 @@ function UpStage() {
     async function updateStage(event) {
         event.preventDefault();
 
-        const dataStage = { name, teory, stageId}
+        const dataStage = { name, courseId, stageId}
 
         try {
             await api.put('/stage', dataStage)
@@ -26,13 +26,13 @@ return(
 
     <div className="App">
 
-    <h1>Atualizar Teoria</h1>
+    <h1>Atualizar Stage</h1>
             <form onSubmit={updateStage} className='form'>
 
                 <input
                     type='text'
                     required
-                    placeholder='Atualizar nome'
+                    placeholder='Atualizar nome do Stage'
                     value={name}
                     onChange={(event) => { setName(event.target.value) }}
                 >

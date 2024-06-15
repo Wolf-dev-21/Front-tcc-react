@@ -9,11 +9,10 @@ function DelStage() {
     async function deleteStage(event) {
         event.preventDefault();
 
-        const dataStage = {stageId}
-
         try {
-            await api.delete('/stage/:stageId', dataStage)
-            alert('Deletada com sucesso.')
+            await api.delete(`/stage/${stageId}`)
+            
+                alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)
         }

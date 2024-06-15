@@ -12,7 +12,7 @@ function DelTeoria() {
         const dataTeory = {teoryId}
 
         try {
-            await api.delete('/teory/:teoryId', dataTeory)
+            await api.delete(`/teory/${teoryId}`)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)

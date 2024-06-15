@@ -1,6 +1,6 @@
 import './style.css';
 import { useState } from 'react';
-import api from '../../api/api';
+import api from '../../../api/api';
 
 function DelAnswer() {
 
@@ -12,7 +12,7 @@ function DelAnswer() {
         const dataAnswer = {answerId}
 
         try {
-            await api.delete('/intermediaryAnswer/:answerId', dataAnswer)
+            await api.delete(`/intermediaryAnswer/${answerId}`)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)
@@ -24,7 +24,7 @@ return(
 
     <div className="App">
 
-    <h1>deletar stage</h1>
+    <h1>deletar Resposta</h1>
             <form onSubmit={deleteAnswer} className='form'>
 
                 <input

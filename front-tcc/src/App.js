@@ -24,9 +24,9 @@ import Task from './pages/Task/Task';
 import Stage from './pages/Stage/Stage';
 
 //Answer
-import Answer from './pages/Answer/Basic';
-import Answer from './pages/Answer/Intermediary';
-import Answer from './pages/Answer/Advanced';
+import BasicAnswer from './pages/Answer/Basic';
+import IntermediaryAnswer from './pages/Answer/Intermediary';
+import AdvancedAnswer from './pages/Answer/Advanced';
 
 function App() {
 return (
@@ -47,9 +47,9 @@ return (
 
                         <Route path='/Stage' element={<Stage/>}/>
 
-                        <Route path='/Answer' element={<Answer/>}/>
-                        <Route path='/Answer' element={<Answer/>}/>
-                        <Route path='/Answer' element={<Answer/>}/>
+                        <Route path='/BasicAnswer' element={<BasicAnswer/>}/>
+                        <Route path='/IntermediaryAnswer' element={<IntermediaryAnswer/>}/>
+                        <Route path='/AdvancedAnswer' element={<AdvancedAnswer/>}/>
 
                 </Routes>
             </Container>

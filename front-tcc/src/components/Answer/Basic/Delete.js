@@ -1,6 +1,6 @@
 import './style.css';
 import { useState } from 'react';
-import api from '../../api/api';
+import api from '../../../api/api';
 
 function DelAnswer() {
 
@@ -12,7 +12,7 @@ function DelAnswer() {
         const dataAnswer = {answerId}
 
         try {
-            await api.delete('/basicAnswer/:answerId', dataAnswer)
+            await api.delete(`/basicAnswer/${answerId}`)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)

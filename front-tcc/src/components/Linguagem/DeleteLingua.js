@@ -10,10 +10,10 @@ function DelLang() {
     async function DeleteLang(event) {
         event.preventDefault();
 
-        const dataLang = {courseId}
+        
 
         try {
-            await api.delete('/course/:courseID', dataLang)
+            await api.delete(`/course/${courseId}`)
             alert('Deletada com sucesso.')
         } catch (error) {
             alert(`Erro ao deletar ${error}`)
