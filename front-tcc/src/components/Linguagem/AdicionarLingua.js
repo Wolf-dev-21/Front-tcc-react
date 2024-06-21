@@ -32,7 +32,7 @@ function AddLang() {
     return (
         <div className="App">
 
-            <h1>Adicionar Linguagem</h1>
+            <h1>Adicionar Curso</h1>
             <form onSubmit={createCourse} className='form'>
                 
                 <input

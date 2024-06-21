@@ -6,7 +6,7 @@ import DelTeoria from "../../components/Teoria.js/DeletarTeoria";
 export default function Teoria(){
     return (
         <div>
-            <Link to='/Linguagem'>Linguagem</Link>
+            <Link to='/Linguagem'>Curso</Link>
             <Link to='/Stage'>Stage</Link>
             <Link to='/Task'>Task</Link>
 

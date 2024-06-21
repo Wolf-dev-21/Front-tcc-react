@@ -71,7 +71,7 @@ return(
                 <input
                     type='text'
                     required
-                    placeholder='Insira o ID do estagio'
+                    placeholder='Insira o ID do stage'
                     value={stageId}
                     onChange={(event) => { setStageId(event.target.value) }}
                 >

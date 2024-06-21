@@ -25,7 +25,7 @@ return(
 
     <div className="App">
 
-    <h1>deletar Lingagem</h1>
+    <h1>deletar Curso</h1>
             <form onSubmit={DeleteLang} className='form'>
 
                 <input

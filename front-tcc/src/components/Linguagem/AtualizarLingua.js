@@ -28,7 +28,7 @@ return(
 
     <div className="App">
 
-    <h1>Atualizar Lingagem</h1>
+    <h1>Atualizar Curso</h1>
             <form onSubmit={updateLang} className='form'>
 
                 <input

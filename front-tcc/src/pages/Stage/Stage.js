@@ -6,7 +6,7 @@ import DelStage from '../../components/Stage/DelStage';
 export default function Task(){
     return(
         <div>
-            <Link to='/Linguagem'>Linguagem</Link>
+            <Link to='/Linguagem'>Curso</Link>
             <Link to='/Teoria'>Teoria</Link>
             <Link to='/Task'>Task</Link>
 

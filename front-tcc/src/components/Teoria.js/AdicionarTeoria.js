@@ -54,7 +54,7 @@ function AddTeoria() {
                 <input
                     type='text'
                     required
-                    placeholder='Insira o ID da dificuldade'
+                    placeholder='Insira o ID da stage'
                     value={stageId}
                     onChange={(event) => { setIdStageId(event.target.value) }}
                 >

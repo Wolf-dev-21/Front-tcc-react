@@ -17,7 +17,7 @@ function AddAnswer() {
         const dataAsnwer = {answer, taskId,altA,altB, altC}
 
         try {
-            await api.post('/basicAnswersk', dataAsnwer)
+            await api.post('/basicAnswer', dataAsnwer)
             alert('Resposta adicionada com sucesso.')
         } catch (error) {
             alert(`Erro ao adicionar ${error}`)

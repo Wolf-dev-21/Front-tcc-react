@@ -6,7 +6,7 @@ import DelAnswer from '../../components/Answer/Intermediary/Delete';
 export default function IntermediaryAnswer(){
     return(
         <div>
-            <Link to='/Linguagem'>Linguagem</Link>
+            <Link to='/Linguagem'>Curso</Link>
             <Link to='/Teoria'>Teoria</Link>
             <Link to='/Stage'>Stage</Link>
             <Link to='/Task'>Task</Link>
