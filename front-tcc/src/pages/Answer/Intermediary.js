@@ -14,6 +14,8 @@ export default function IntermediaryAnswer(){
             <Link to='/BasicAnswer'>Resposta Básica</Link>
             <Link to='/AdvancedAnswer'>Resposta avançada</Link>
 
+            <Link to='/Group'>Grupos</Link>
+
             <AddAnswer/>
             <UpAnswer/>
             <DelAnswer/>

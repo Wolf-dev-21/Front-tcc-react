@@ -1,4 +1,4 @@
-.container{
+/* .container{
     width: 1200px;
     padding: 10px;
     display: flex;
@@ -10,9 +10,9 @@
 
 .min_height{
     min-height: 75%;
-}
+} */
 
-/* body, html {
+body, html {
     margin: 0;
     padding: 0;
     width: 100;
@@ -101,4 +101,4 @@ a:hover {
 
 .create-account-button:hover {
     background-color: #005f00;
-} */
+}

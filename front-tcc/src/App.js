@@ -28,6 +28,8 @@ import BasicAnswer from './pages/Answer/Basic';
 import IntermediaryAnswer from './pages/Answer/Intermediary';
 import AdvancedAnswer from './pages/Answer/Advanced';
 
+import Group from './pages/Group/Group';
+
 function App() {
 return (
     <div className="App">
@@ -50,6 +52,8 @@ return (
                         <Route path='/BasicAnswer' element={<BasicAnswer/>}/>
                         <Route path='/IntermediaryAnswer' element={<IntermediaryAnswer/>}/>
                         <Route path='/AdvancedAnswer' element={<AdvancedAnswer/>}/>
+
+                        <Route path='/Group' element={<Group/>}/>
 
                 </Routes>
             </Container>

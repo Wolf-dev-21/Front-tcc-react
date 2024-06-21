@@ -15,6 +15,9 @@ export default function Linguagem(){
             <Link to='/BasicAnswer'>Resposta Básica</Link>
             <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
             <Link to='/AdvancedAnswer'>Resposta avançada</Link>
+
+            <Link to='/Group'>Grupos</Link>
+
             <AddLang/>
             <UpLang/>
             <DelLang/>

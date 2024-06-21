@@ -14,6 +14,8 @@ export default function Task(){
             <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
             <Link to='/AdvancedAnswer'>Resposta avançada</Link>
 
+            <Link to='/Group'>Grupos</Link>
+
             <AddTask/>
             <UpTask/>
             <DelTask/>

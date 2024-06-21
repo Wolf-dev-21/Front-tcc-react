@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import AddTeoria from "../../components/Teoria.js/AdicionarTeoria";
-import UpTeoria from "../../components/Teoria.js/AtulalizarTeoria";
-import DelTeoria from "../../components/Teoria.js/DeletarTeoria";
+import AddGroup from '../../components/Group/AddGroup';
+import UpGroup from '../../components/Group/UpGroup';
+import DelGroup from '../../components/Group/DelGroup';
 
-export default function Teoria(){
+
+export default function Group(){
     return (
         <div>
             <Link to='/Linguagem'>Curso</Link>
+            <Link to='/Teoria'>Teoria</Link>
             <Link to='/Stage'>Stage</Link>
             <Link to='/Task'>Task</Link>
 
@@ -14,11 +16,9 @@ export default function Teoria(){
             <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
             <Link to='/AdvancedAnswer'>Resposta avançada</Link>
 
-            <Link to='/Group'>Grupos</Link>
-
-            <AddTeoria/>
-            <UpTeoria/>
-            <DelTeoria/>
+            <AddGroup/>
+            <UpGroup/>
+            <DelGroup/>
         </div>
     );
 
