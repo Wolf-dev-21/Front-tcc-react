@@ -37,11 +37,11 @@ return (
         <BrowserRouter>
             <Container>
                 <Routes>
-                <Route path='/' element={<NavBar/>}>
+                
                 <Route index element={<LoginDev/>}/>
                         
                         <Route path='/Register' element={<Register/>}/>
-
+                <Route path='/' element={<NavBar/>}>
                         <Route path='/Linguagem' element={<Linguagem/>}/>
                         <Route path='/Teoria' element={<Teoria/>}/>
 
@@ -54,7 +54,7 @@ return (
                         <Route path='/AdvancedAnswer' element={<AdvancedAnswer/>}/>
 
                         <Route path='/Group' element={<Group/>}/>
-              </Route>
+            </Route>
                         
                         
 
