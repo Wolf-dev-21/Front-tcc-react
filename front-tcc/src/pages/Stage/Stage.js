@@ -6,7 +6,7 @@ import DelStage from '../../components/Stage/DelStage';
 export default function Task(){
     return(
         <div>
-            <Link to='/Linguagem'>Curso</Link>
+            {/* <Link to='/Linguagem'>Curso</Link>
             <Link to='/Teoria'>Teoria</Link>
             <Link to='/Task'>Task</Link>
 
@@ -14,7 +14,7 @@ export default function Task(){
             <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
             <Link to='/AdvancedAnswer'>Resposta avançada</Link>
 
-            <Link to='/Group'>Grupos</Link>
+            <Link to='/Group'>Grupos</Link> */}
 
             <AddStage/>
             <UpStage/>

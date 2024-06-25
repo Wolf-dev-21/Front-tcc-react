@@ -8,7 +8,7 @@ export default function Linguagem(){
     return (
         <div>
             
-            <Link to='/Teoria'>Teoria</Link>
+            {/* <Link to='/Teoria'>Teoria</Link>
             <Link to='/Stage'>Stage</Link>
             <Link to='/Task'>Task</Link>
 
@@ -16,7 +16,7 @@ export default function Linguagem(){
             <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
             <Link to='/AdvancedAnswer'>Resposta avançada</Link>
 
-            <Link to='/Group'>Grupos</Link>
+            <Link to='/Group'>Grupos</Link> */}
 
             <AddLang/>
             <UpLang/>

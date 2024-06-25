@@ -6,7 +6,7 @@ import DelAnswer from '../../components/Answer/advanced/Delete';
 export default function AdvancedAnswer(){
     return(
         <div>
-            <Link to='/Linguagem'>Curso</Link>
+            {/* <Link to='/Linguagem'>Curso</Link>
             <Link to='/Teoria'>Teoria</Link>
             <Link to='/Stage'>Stage</Link>
             <Link to='/Task'>Task</Link>
@@ -14,7 +14,7 @@ export default function AdvancedAnswer(){
             <Link to='/BasicAnswer'>Resposta Básica</Link>
             <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
 
-            <Link to='/Group'>Grupos</Link>
+            <Link to='/Group'>Grupos</Link> */}
 
             <AddAnswer/>
             <UpAnswer/>

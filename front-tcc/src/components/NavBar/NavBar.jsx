@@ -14,14 +14,39 @@ export default function NavBar() {
                     
 
                     <li className={styles.item}>
-                        <Link to='/Linguagem'>Linguagens</Link>
+                        <Link to='/Linguagem'>Curso</Link>
                     </li>
+
                     <li className={styles.item}>
                         <Link to='/Teoria'>Teorias</Link>
                     </li>
-                    <li className={styles.item}>
 
+                    <li className={styles.item}>
+                        <Link to='/Task'>Atividade</Link>
                     </li>
+                    
+                    <li className={styles.item}>
+                        <Link to='/Stage'>Estágio</Link>
+                    </li>
+
+                    <li className={styles.item}>
+                        <Link to='/BasicAnswer'>Resposta Básica</Link>
+                    </li>
+
+                    <li className={styles.item}>
+                        <Link to='/IntermediaryAnswer'>Resposta Intermediária</Link>
+                    </li>
+
+                    <li className={styles.item}>
+                        <Link to='/AdvancedAnswer'>Resposta Avançada</Link>
+                    </li>
+
+                    <li className={styles.item}>
+                        <Link to='/Group'>Grupos</Link>
+                    </li>
+
+
+                    
                 </ul>
             </Container>
             <Outlet/>
